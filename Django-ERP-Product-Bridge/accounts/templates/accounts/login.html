@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Full-height container to vertically & horizontally center the login card -->
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+
+    <!-- Card wrapper to keep the form compact and visually separated -->
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px;">
+
+        <!-- Login page title -->
+        <h3 class="text-center mb-4">🔐 Είσοδος χρήστη</h3>
+
+        <!-- Display authentication error messages (e.g. invalid credentials) -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-danger py-2">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <!-- Login form (POST required for authentication) -->
+        <form method="POST">
+            {% csrf_token %}
+
+            <!-- Username input field -->
+            <div class="mb-3">
+                <label class="form-label">Όνομα χρήστη</label>
+                <input type="text" 
+                       name="username" 
+                       class="form-control"
+                       placeholder=""
+                       required>
+            </div>
+
+            <!-- Password input field -->
+            <div class="mb-3">
+                <label class="form-label">Κωδικός Πρόσβασης</label>
+                <input type="password" 
+                       name="password" 
+                       class="form-control"
+                       placeholder=""
+                       required>
+            </div>
+
+            <!-- Submit button (full width using Bootstrap grid utility) -->
+            <div class="d-grid mt-4">
+                <button type="submit" 
+                        class="btn btn-primary">
+                    Είσοδος
+                </button>
+            </div>
+
+            <!-- Navigation link to registration page -->
+            <div class="text-center mt-3">
+                Δεν έχεις λογαριασμό;
+                <a href="{% url 'register' %}">Κάνε εγγραφή</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

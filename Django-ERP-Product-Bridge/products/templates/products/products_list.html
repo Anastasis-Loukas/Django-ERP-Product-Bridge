@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+{% endblock %}
+
+{% block content %}
+
+<h2>Products</h2>
+
+<br>
+
+<a href="{% url 'products:create' %}" 
+   class="btn btn-success btn-sm mb-3">
+   + Create New Product
+</a>
+
+<table id="products-table" class="display table table-striped table-bordered">
+    <thead>
+        <tr>
+            <!--<th>External_id</th>-->
+            <th>Code</th>
+            <th>Description</th>
+            <th>Name</th>
+            <!--<th>Barcode</th>-->
+            <th>Retail price</th>
+            <!--<th>Wholesale_price</th>-->
+            <!--<th>Discount</th>-->
+            <th>Updated at</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for product in products %}
+        <tr>
+           <!--<td>{{ product.external_id }}</td>--> 
+            <td>{{ product.code }}</td>
+            <td>{{ product.description}}</td>
+            <td>{{ product.name }}</td>
+            <!--<td>{{ product.barcode}}</td>-->
+            <td>{{ product.retail_price }}</td>
+            <!--<td>{{ product.wholesale_price }}</td>-->
+            <!--<td>{{ product.discount }}</td>-->
+            <td>{{ product.updated_at }}</td>
+           <td colspan="10" class="text-center">
+                <div class="d-inline-flex gap-2">
+
+                <a href="{% url 'products:edit' product.pk %}" 
+                        class="btn btn-warning btn-sm">
+                        Edit
+                </a>
+
+                <a href="{% url 'products:delete' product.pk %}" 
+                        class="btn btn-danger btn-sm">
+                        Delete
+                </a>
+
+               </div>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="10">No products found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $('#products-table').DataTable({
+        pageLength: 10
+    });
+});
+</script>
+{% endblock %}

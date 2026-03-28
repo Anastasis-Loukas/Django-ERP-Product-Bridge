@@ -1,0 +1,20 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python bytecode (temporary files)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django sensitive files
+.env
+db.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Media & Static (αν έχεις τοπικά αρχεία που δεν θες να ανέβουν)
+media/

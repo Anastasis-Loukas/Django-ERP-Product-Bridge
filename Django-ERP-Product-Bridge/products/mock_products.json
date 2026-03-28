@@ -1,0 +1,99 @@
+{
+  "success": true,
+  "data": [
+    {
+      "externalId": "756856",
+      "code": "PO128978",
+      "description": "BACTRIM TAB (800+160)MG/TAB BT x 16",
+      "name": "BACTRIM",
+      "barcode": "2809741301012",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "756746",
+      "code": "PO128868",
+      "description": "PMESSINIAN SPA TSOUREKI SHOWER GEL 250ML + BODY MILK 250ML",
+      "barcode": "5202409212809",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "756499",
+      "code": "PO128621",
+      "description": "VECTIBIX C/S.SOL.IN 20MG/ML (400MG/20ML) BT x 1VIAL x 20ML",
+      "name": "VECTIBIX",
+      "barcode": "2809740002019",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "756498",
+      "code": "PO128620",
+      "description": "VECTIBIX C/S.SOL.IN 20MG/ML (100MG/5ML) BT x 1VIAL x 5ML",
+      "name": "VECTIBIX",
+      "barcode": "2809740001012",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "756496",
+      "code": "PO128618",
+      "description": "NPLATE PS.INJ.SOL 500MCG/VIAL BT x 1VIAL+ 1PF.SYR x 1,2 ML SOLV + admin kit",
+      "name": "NPLATE",
+      "barcode": "2809740101019",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "754917",
+      "code": "PO127039",
+      "description": "LEVEL самдаки цумаийеио пацоу No35 йыд 01-1223",
+      "barcode": "5212049828094",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "754916",
+      "code": "PO127038",
+      "description": "LEVEL самдаки цумаийеио лпеф No42 йыд 01-1223",
+      "barcode": "5212049828087",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "754915",
+      "code": "PO127037",
+      "description": "LEVEL самдаки цумаийеио лпеф No41 йыд 01-1223",
+      "barcode": "5212049828070",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "754914",
+      "code": "PO127036",
+      "description": "LEVEL самдаки цумаийеио лпеф No40 йыд 01-1223",
+      "barcode": "5212049828063",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    },
+    {
+      "externalId": "754874",
+      "code": "PO126996",
+      "description": "LEVEL самдаки цумаийеио лпеф No39 йыд 01-1223",
+      "barcode": "5212049828056",
+      "retailPrice": "0",
+      "wholesalePrice": "0",
+      "discount": "0"
+    }
+  ]
+}

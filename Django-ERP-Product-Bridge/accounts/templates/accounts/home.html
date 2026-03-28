@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+
+    <!-- Card used as dashboard entry panel -->
+    <div class="card shadow-sm p-5 text-center">
+
+        <!-- Authenticated user greeting -->
+        <h1 class="display-5 text-center mb-4">
+            Καλωσήρθες {{ user.username }}
+        </h1>
+
+        <!-- Short dashboard description -->
+        <p class="text-muted mb-4">
+            Διαχειρίσου τα προϊόντα σου εύκολα και γρήγορα.
+        </p>
+
+        <!-- Primary navigation action to products module -->
+        <div class="text-center">
+            <a href="{% url 'products:home' %}"
+               class="btn btn-primary btn-lg px-4">
+                📦 Λίστα Προϊόντων
+            </a>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

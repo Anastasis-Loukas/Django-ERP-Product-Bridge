@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Αποθήκη προιόντων{% endblock %}</title>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            border-radius: 12px;
+        }
+
+        .btn {
+            border-radius: 8px;
+        }
+    </style>
+
+    {% block extra_css %}
+    <!-- External UI libraries (DataTables + Bootstrap) -->
+    <link rel="stylesheet"
+          href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    {% endblock %}
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+
+        {% if user.is_authenticated %}
+
+            <div class="d-flex gap-3">
+                <!-- Disable Home button when already on /home/ -->
+                <a href="{% url 'home' %}"
+                   class="btn btn-primary {% if request.path == '/home/' %}disabled{% endif %}">
+                    Αρχική
+                </a>
+            </div>
+            <!-- Push element to the right side inside flex container -->
+            <div class="ms-auto">
+                <!-- Logout must be POST for security reasons -->
+                <form method="post" action="{% url 'logout' %}" class="m-0">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">
+                        Αποσύνδεση
+                    </button>
+                </form>
+            </div>
+
+        {% else %}
+
+            <div class="ms-auto">
+                <!-- Avoid showing Login button on login/register pages -->
+                {% if request.resolver_match.url_name != 'login' and request.resolver_match.url_name != 'register' %}
+                    <a href="{% url 'login' %}" class="btn btn-outline-primary">
+                        Είσοδος
+                    </a>
+                {% endif %}
+            </div>
+
+        {% endif %}
+
+    </div>
+</nav>
+
+<!-- Page-specific content gets injected here -->
+<div class="container mt-4">
+    {% block content %}{% endblock %}
+</div>
+
+{% block extra_js %}
+<!-- JS dependencies loaded globally -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+{% endblock %}
+
+</body>
+</html>

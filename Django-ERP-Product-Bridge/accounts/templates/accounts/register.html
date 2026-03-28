@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Full-height centered layout for authentication pages -->
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+
+    <!-- Fixed-width card to keep form compact and readable -->
+    <div class="card shadow p-5 border-0" style="width: 100%; max-width: 420px; border-radius: 16px;">
+
+        <h2 class="text-center mb-4 fw-semibold">
+            Δημιουργία Λογαριασμού
+        </h2>
+
+        <!-- Registration form (POST required for user creation) -->
+        <form method="post">
+            {% csrf_token %}
+
+            <!-- Dynamic rendering of Django form fields -->
+            {% for field in form %}
+                <div class="mb-3">
+                    <label class="form-label fw-semibold">
+                        {{ field.label }}
+                    </label>
+
+                    {{ field }}
+
+                    <!-- Field-level validation errors -->
+                    {% if field.errors %}
+                        <div class="text-danger small mt-1">
+                            {{ field.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+
+            <div class="d-grid mt-4">
+                <button type="submit" class="btn btn-success btn-lg">
+                    Εγγραφή
+                </button>
+            </div>
+
+        </form>
+
+        <!-- Navigation to login page for existing users -->
+        <div class="text-center mt-4">
+            Έχεις ήδη λογαριασμό;
+            <a href="{% url 'login' %}" class="fw-semibold text-decoration-none">
+                Σύνδεση
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+<div class="container mt-5">
+    <div class="card shadow-sm p-4">
+    {% block content %}
+        <h2 class="mb-4 text-center">📦 Αποθήκη προιόντων </h2>
+
+        <form method="post">
+            {% csrf_token %}
+          <div class="text-center">
+             <button type="submit" class="btn btn-primary btn-lg" >🔄 Συγχονισμός / Ανανέωση Προιόντων</button>
+          </div>
+        </form>
+    {% endblock %}
+    </div>
+</div>
