@@ -49,16 +49,33 @@ Designed to demonstrate data consistency, API integration, and resilient backend
 
 ### 1. Product Management Dashboard
 *Full CRUD interface with DataTables integration (Search, Sort, Pagination).*
-![Products List](docs/images/products_list.png)
+
+![Products List](Django-ERP-Product-Bridge/docs/images/products_list.png)
+
+<br>
 
 ### 2. Product Synchronization
 *The core trigger that fetches and syncs data from the external ERP API.*
-![Sync Button](docs/images/sync_button.png)
+
+![Sync Button](Django-ERP-Product-Bridge/docs/images/sync_button.png)
+
+<br>
 
 ### 3. Secure Authentication
 *User login and registration for protected access.*
-![Login](docs/images/login.png) 
-![Register](docs/images/register.png)
+
+<table width="100%">
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <strong>Login Screen</strong><br><br>
+      <img src="Django-ERP-Product-Bridge/docs/images/login.png" width="350">
+    </td>
+    <td align="center" valign="top" width="50%">
+      <strong>Registration Screen</strong><br><br>
+      <img src="Django-ERP-Product-Bridge/docs/images/register.png" width="350">
+    </td>
+  </tr>
+</table>
 
 ---
 
