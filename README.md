@@ -45,6 +45,23 @@ Designed to demonstrate data consistency, API integration, and resilient backend
 
 ---
 
+## 📸 Application Screenshots
+
+### 1. Product Management Dashboard
+*Full CRUD interface with DataTables integration (Search, Sort, Pagination).*
+![Products List](docs/images/products_list.png)
+
+### 2. Product Synchronization
+*The core trigger that fetches and syncs data from the external ERP API.*
+![Sync Button](docs/images/sync_button.png)
+
+### 3. Secure Authentication
+*User login and registration for protected access.*
+![Login](docs/images/login.png) 
+![Register](docs/images/register.png)
+
+---
+
 ## 🛠️ Tech Stack
 
 * **Backend:** Python 3.12, Django
