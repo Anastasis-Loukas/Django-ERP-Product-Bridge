@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = 'Django-ERP-Product-Bridge.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
         },
     },
 ]
-WSGI_APPLICATION = 'project.wsgi.application'
+WSGI_APPLICATION = 'Django-ERP-Product-Bridge.wsgi.application'
 
 
 # Database
@@ -123,6 +123,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-#προσθηκη url
+
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
