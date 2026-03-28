@@ -182,15 +182,21 @@ For confidentiality reasons:
 
 ```
 Django-ERP-Product-Bridge/
-│── accounts/                  # authentication
-│── products/                  # product management & ERP sync
-│── templates/                 # global templates
+│── README.md
+│── .gitignore
 │
-│── Django-ERP-Product-Bridge/ # project settings
-│
-│── manage.py
-│── requirements.txt
-│── .env.example
+└── Django-ERP-Product-Bridge/     # Main Project Folder
+    │── manage.py
+    │── requirements.txt
+    │── .env_example
+    │
+    │── accounts/                  # User authentication & profile management
+    │── products/                  # Core logic: Product management & ERP sync
+    │── templates/                 # Global UI templates
+    │── docs/
+    │   └── images/                # Screenshots for documentation
+    │
+    └── Django-ERP-Product-Bridge/ # Project settings (settings.py, urls.py, wsgi.py)
 ```
 
 ---
